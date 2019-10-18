@@ -55,7 +55,7 @@ object triplex_node {
 }
 global int32 SEQ_CUSTID 0;
 
-object triplex_meter:..7 { 
+object triplex_meter:.. { 
 	name `meter_{SEQ_CUSTID:INC}`;
 	phases AS;
 	parent tf_node;
@@ -65,7 +65,7 @@ object triplex_meter:..7 {
 		groupid group_houses;
 		floor_area random.triangle(1000,1500);
 		cooling_setpoint 75 degF;
-		heating_setpoint 70 degF;
+		
 		hvac_power_factor 0.75;
 		cooling_system_type HEAT_PUMP;	
 		heating_system_type HEAT_PUMP;
