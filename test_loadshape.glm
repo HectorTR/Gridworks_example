@@ -27,7 +27,7 @@ object meter{
 	object recorder{
 		file "output/main_node.csv";
 		interval -1; 
-		property measured_real_power[kW], measured_reactive_power[kW];
+		property measured_real_enrgy [kWh];
 	};
 }
 
@@ -64,8 +64,9 @@ object triplex_meter:..10 {
 		name `house_{SEQ_CUSTID}`;
 		groupid group_houses;
 		floor_area random.triangle(1000,1500);
-		
-		
+		cooling 
+		cooling_setpoint 80 degF;
+		heating_setpoint 65 degF;
 		hvac_power_factor 0.75;
 		cooling_system_type HEAT_PUMP;	
 		heating_system_type HEAT_PUMP;
