@@ -64,8 +64,8 @@ object triplex_meter:..10 {
 		name `house_{SEQ_CUSTID}`;
 		groupid group_houses;
 		floor_area random.triangle(1000,1500);
-		cooling_setpoint 80 degF;
-		heating_setpoint 70 degF;
+		cooling_setpoint 75 degF;
+		heating_setpoint 60 degF;
 		hvac_power_factor 0.75;
 		cooling_system_type HEAT_PUMP;	
 		heating_system_type HEAT_PUMP;
