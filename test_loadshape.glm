@@ -27,7 +27,7 @@ object meter{
 	object recorder{
 		file "output/main_node.csv";
 		interval -1; 
-		property measured_real_power[], measured_reactive_power[] ;
+		property measured_real_power[kW], measured_reactive_power[kW] ;
 	};
 }
 
