@@ -19,6 +19,7 @@ jobs:
           name: Run the simulation
           command: |
             gridlabd weather get CA-San_Francisco_Intl_Ap.tmy3
+            gridlabd weather info CA-San_Francisco_Intl_Ap.tmy3
             gridlabd test_loadshape.glm
       - store_artifacts: 
             path: /root/project/output
