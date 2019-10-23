@@ -91,6 +91,7 @@ object collector {
 	name collector_total;
 	group class=triplex_meter;
 	property sum(measured_real_power[kW]);
+	property sum(measured_reactive_power[kVA]);
 	file "output/load_total.csv";
 	interval -1; // collects output everytime the value changes 
 	flush 0;
