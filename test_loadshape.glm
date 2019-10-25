@@ -28,7 +28,7 @@ object meter{
 	phases AN;
 	object recorder{
 		file "output/main_node.csv";
-		interval 3600; //-1 was used as a default 
+		interval -1; //-1 was used as a default 
 		property measured_real_power[kW], measured_reactive_power[kW];
 		line_units NONE;
 	};
@@ -93,7 +93,7 @@ object collector {
 	property sum(measured_real_power[kW]);
 	property sum(measured_reactive_power[kVA]);
 	file "output/load_total.csv";
-	interval 3600; // collects output everytime the value changes when is set to -1
+	interval -1; // collects output everytime the value changes when is set to -1
 	flush 0;
 }
 
