@@ -64,8 +64,8 @@ object triplex_meter:..1 {
 		name `house_{SEQ_CUSTID}`;
 		groupid group_houses;
 		floor_area random.triangle(1000,1500);
-		cooling_setpoint 60 degF;
-		heating_setpoint 50 degF;
+		cooling_setpoint 70 degF;
+		heating_setpoint 60 degF;
 		hvac_power_factor 0.75;
 		cooling_system_type HEAT_PUMP;	
 		heating_system_type HEAT_PUMP;
@@ -85,7 +85,7 @@ object collector {
 	group class=house;
 	property sum(hvac_load[kW]);
 	file "output/load_HVAC.csv";
-	interval -1; // collects output everytime the value changes 
+	interval 3600; // collects output everytime the value changes 
 	flush 0;
 }
 
