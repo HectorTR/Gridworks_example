@@ -55,7 +55,7 @@ object triplex_node {
 }
 global int32 SEQ_CUSTID 0;
 
-object triplex_meter:..4 { 
+object triplex_meter:..1 { 
 	name `meter_{SEQ_CUSTID:INC}`;
 	phases AS;
 	parent tf_node;
