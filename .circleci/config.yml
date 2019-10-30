@@ -10,14 +10,9 @@ jobs:
           name: Create output folder
           command: |
             mkdir output
-      - run: 
-          name: Run version check
-          command: |
-            gridlabd --version
-            gridlabd --origin
       - run:
           name: Run the simulation
           command: |
-            gridlabd test_loadshape.glm
+            python3 run_model.glm
       - store_artifacts: 
             path: /root/project/output

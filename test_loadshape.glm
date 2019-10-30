@@ -1,10 +1,11 @@
+module EV_load;
 clock {
 	timezone "US/CA/Los Angeles";
 	starttime "2018-01-20T00:00:00-08:00";
 	stoptime "2018-01-21T00:00:00-08:00";
 }
 #set randomseed=5 
-#set minimum_timestep=60
+//#set minimum_timestep=1
 module climate;
 object climate {
         name weather;
@@ -29,6 +30,14 @@ object meter{
 		interval -1; 
 		property measured_real_power[kW], measured_reactive_power[kW];
 	};
+}
+
+object load{
+	name load_EV;
+	parent main_node;
+	phases AN;
+	constant_power_A 40000.000000+20000.000000j; // initialized parameter
+	nominal_voltage 2401 V;
 }
 
 object transformer_configuration {
@@ -70,12 +79,6 @@ object triplex_meter:..1 {
 		cooling_system_type HEAT_PUMP;	
 		heating_system_type HEAT_PUMP;
 		thermal_integrity_level VERY_GOOD;
-		thermal_integrity_level GOOD;	
-//		object recorder {
-//			file `output/house_hvac_load_{SEQ_CUSTID}.csv`;
-//			property "hvac_load";
-//			interval  3600;
-//		};
 	}; 
 }
 
