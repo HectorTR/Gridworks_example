@@ -13,6 +13,7 @@ jobs:
       - run:
           name: Run the simulation
           command: |
+            ls
             python3 run_model.py
       - store_artifacts: 
             path: /root/project/output
