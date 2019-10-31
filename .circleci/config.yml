@@ -18,6 +18,6 @@ jobs:
       - run:
           name: Run the simulation
           command: |
-            gridlabd test_loadshape.py
+            python3 test_loadshape.py
       - store_artifacts: 
             path: /root/project/output
