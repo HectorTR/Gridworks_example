@@ -85,7 +85,7 @@ object collector {
 	group class=house;
 	property sum(hvac_load[kW]);
 	file "output/load_HVAC.csv";
-	interval 3600; // collects output everytime the value changes 
+	interval -1; // collects output everytime the value changes -1 
 	flush 0;
 }
 
