@@ -69,8 +69,8 @@ object triplex_meter:..1 {
 		hvac_power_factor 0.75;
 		cooling_system_type HEAT_PUMP;	
 		heating_system_type HEAT_PUMP;
-		thermal_integrity_level POOR;
-		thermal_integrity_level POOR;	
+		thermal_integrity_level GOOD;
+		thermal_integrity_level GOOD;	
 //		object recorder {
 //			file `output/house_hvac_load_{SEQ_CUSTID}.csv`;
 //			property "hvac_load";
